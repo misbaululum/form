@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>PDP Form</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            padding-top: 56px;
+            background-color: aliceblue;
+        }
+.container {
+    margin-bottom: 30px;
+}
+
+.centered-form {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        @media (max-width: 767px) {
+            body {
+                padding-top: 0;
+                margin-top: 20;
+            }
+
+            .container {
+                padding-top: 20px;
+                margin-top: 50px;
+                margin-bottom: 50px;
+                margin-left: 5px;
+                margin-right: 5px;
+            }
+        }
+
+        .custom-container {
+            background-color: white;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+
+        .navbar-brand {
+            font-size: 24px;
+        }
+
+        .navbar-nav a {
+            font-size: 18px;
+        }
+
+        /* Style untuk mencetak */
+        @media print {
+            body {
+                background-color: white;
+            }
+
+            .custom-container {
+                box-shadow: none;
+                width: 100%;
+                padding: 0;
+                border-radius: 0;
+            }
+
+            .custom-footer {
+                display: none;
+            }
+        }
+
+        .custom-footer {
+            background-color: #343a40;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            width: 100%;
+            /* position: fixed; */
+            bottom: 0;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" href="#">PDP Form</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="home.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="newform.html">Page 1</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="form2.html">Page 2</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Page 3</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Page 4</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <br>
+    <br>
+
+    <div class="container custom-container">
+        <div class="row">
+            <div class="col-12 col-md-6">
+                <div class="card mb-3">
+                    <img class="card-img-top img-fluid" src="fav2.png" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Form 1</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Isi form disini</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6">
+                <div class="card mb-3">
+                    <img class="card-img-top img-fluid" src="fav2.png" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Form 2</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Isi form disini</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+     
+
+     <!-- Footer Section -->
+     <div class="custom-footer">
+        <p style="margin-bottom: 0;"></pstyle>&copy; 2023 Primadaya Plastisindo</p>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        var scriptUrl = 'https://script.google.com/macros/s/AKfycbzGgPS4GQJcSAYJoySchfZIrvWgyjcMWNT9Q9k2cDgIAdA-wn6aHXNAGbn9fXtbCuY2rw/exec';
+    
+        function hitungJumlahCuti() {
+            var hari1 = new Date(document.getElementById("hari1").value);
+            var hari2 = new Date(document.getElementById("hari2").value);
+    
+            // Menghitung selisih dalam hari
+            var diffDays = Math.ceil((hari2 - hari1) / (1000 * 60 * 60 * 24));
+    
+            // Menyisipkan nilai ke input jumlahCuti
+            document.getElementById("jumlahCuti").value = diffDays || 0;
+    
+            // Menyisipkan nilai ke input sisaCuti (dengan nilai default 12)
+            document.getElementById("sisaCuti").value = Math.max(12 - diffDays, 0);
+        }
+    
+        // function submitForm() {
+        //     var nik = document.getElementById("nik").value;
+    
+        //     // Kirim data ke Google Apps Script
+        //     google.script.run
+        //         .withSuccessHandler(function (response) {
+        //             console.log(response);
+        //             // Handle respons sukses jika diperlukan
+        //         })
+        //         .withFailureHandler(function (error) {
+        //             console.error(error);
+        //             // Handle respons kesalahan jika diperlukan
+        //         })
+        //         .doPost({ nik: nik, /* tambahkan data lainnya */ });
+        // }
+
+// ... (Fungsi hitungJumlahCuti dan submitForm yang sudah ada) ...
+
+function submitAndPrint() {
+            // Lakukan hal yang diperlukan sebelum submit, misalnya validasi form
+
+            // Kirim data ke Google Apps Script (ganti dengan implementasi sesuai kebutuhan)
+            submitForm();
+
+            // Membuka jendela cetak setelah submit
+            window.print();
+        }
+
+        // Fungsi submitForm (ganti dengan implementasi sesuai kebutuhan)
+        function submitForm() {
+            var nik = document.getElementById("nik").value;
+            // ... (Proses pengiriman data ke Google Apps Script atau server lainnya)
+        }
+    </script>
+    
+</body>
+
+</html>

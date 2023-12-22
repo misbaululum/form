@@ -6,82 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>PDP Form</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <style>
-        body {
-            padding-top: 56px;
-            background-color: aliceblue;
-        }
-.container {
-    margin-bottom: 30px;
-}
-
-.centered-form {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
-        }
-
-        @media (max-width: 767px) {
-            body {
-                padding-top: 0;
-                margin-top: 20;
-            }
-
-            .container {
-                padding-top: 20px;
-                margin-top: 50px;
-                margin-bottom: 50px;
-                margin-left: 8px;
-                margin-right: 8px;
-                max-width: 800px;
-                padding: 20px;
-            }
-        }
-
-        .custom-container {
-            background-color: white;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            border-radius: 10px;
-        }
-
-        .navbar-brand {
-            font-size: 24px;
-        }
-
-        .navbar-nav a {
-            font-size: 18px;
-        }
-
-        /* Style untuk mencetak */
-        @media print {
-            body {
-                background-color: white;
-            }
-
-            .custom-container {
-                box-shadow: none;
-                width: auto;
-                padding: 0;
-                border-radius: 0;
-            }
-
-            .custom-footer {
-                display: none;
-            }
-        }
-
-        .custom-footer {
-            background-color: #343a40;
-            color: white;
-            padding: 10px 0;
-            text-align: center;
-            width: 100%;
-            /* position: fixed; */
-            bottom: 0;
-        }
-    </style>
+    <link rel="stylesheet" href="customstyle.css">
 </head>
 
 <body>
@@ -116,6 +41,9 @@
     <br>
 
     <div class="container custom-container col-md-5">
+        <label for="alasan" class="center-label">Form Cuti</label>
+        <hr class="bold-hr">
+        <br>
         <form id="leaveForm">
             <div class="form-group">
                 <label for="nik">NIK:</label>
@@ -129,6 +57,9 @@
                 <label for="jabatan">Jabatan:</label>
                 <input type="text" class="form-control" id="jabatan" name="jabatan" placeholder="Masukkan Jabatan" required>
             </div>
+            <br>
+              <hr>
+              <br>
             <label for="alasan" class="font-weight-bold" style="font-size: 20px;">Tidak Masuk Kerja (tanpa potong cuti)</label>
             <div class="form-row">
                 <div class="form-group col-md-6">
@@ -185,6 +116,8 @@
                 </label>
             </div>
               <br>
+              <hr>
+              <br>
               <label for="alasan" class="font-weight-bold" style="font-size: 20px;">Cuti</label>
               <div class="form-row">
                 <div class="form-group col-md-6">
@@ -212,6 +145,9 @@
                 <input type="number" class="form-control" id="sisaCuti" name="sisaCuti" placeholder="Sisa hari cuti"
                     readonly>
             </div>
+            <br>
+              <hr>
+              <br>
             <label for="alasan" class="font-weight-bold" style="font-size: 20px;">Ijin Tidak Masuk Kerja (dipotong cuti)</label>
             <div class="form-row">
                 <div class="form-group col-md-6">
@@ -230,6 +166,9 @@
                 <textarea class="form-control" id="alasan" name="alasan" rows="4" placeholder="Masukkan alasan"
                     required></textarea>
             </div>
+            <br>
+              <hr>
+              <br>
             <label for="alasan" class="font-weight-bold" style="font-size: 20px;">Terlambat / Meninggalkan Pekerjaan (Pulang Cepat)</label>
             <div class="form-row">
                 <div class="form-group col-md-6">
@@ -246,12 +185,14 @@
                 <textarea class="form-control" id="alasan" name="alasan" rows="4" placeholder="Masukkan alasan"
                     required></textarea>
             </div>
+            <hr>
             <div class="form-row">
             <div class="form-group col-md-6">
                 <label for="dateCreate">Lampung</label>
                 <input type="date" class="form-control" id="dateCreate" name="dateCreate" required>
             </div>
         </div>
+        <hr>
             <div class="form-group">
                 <label for="approval1">Approval 1:</label>
                 <select class="form-control" id="approval1" name="approval1" required>
@@ -260,6 +201,7 @@
                     <!-- Add more options as needed -->
                 </select>
             </div>
+            <hr>
             <div class="form-group">
                 <label for="approval2">Approval 2:</label>
                 <select class="form-control" id="approval2" name="approval2" required>
@@ -268,6 +210,7 @@
                     <!-- Add more options as needed -->
                 </select>
             </div>
+            <hr>
             <div class="form-group">
                 <label for="cabang">Cabang:</label>
                 <select class="form-control" id="cabang" name="cabang" required>
@@ -280,6 +223,7 @@
                     <!-- Add more options as needed -->
                 </select>
             </div>
+            <br>
             <button type="button" class="btn btn-primary btn-block" onclick="submitAndPrint()">Submit Form</button>
         </form>
     </div>

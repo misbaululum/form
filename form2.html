@@ -6,80 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>PDP Form</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <style>
-        body {
-            padding-top: 56px;
-            background-color: aliceblue;
-        }
-.container {
-    margin-bottom: 30px;
-}
-
-.centered-form {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
-        }
-
-        @media (max-width: 767px) {
-            body {
-                padding-top: 0;
-                margin-top: 20;
-            }
-
-            .container {
-                padding-top: 20px;
-                margin-top: 50px;
-                margin-bottom: 50px;
-                margin-left: 5px;
-                margin-right: 5px;
-            }
-        }
-
-        .custom-container {
-            background-color: white;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            border-radius: 10px;
-        }
-
-        .navbar-brand {
-            font-size: 24px;
-        }
-
-        .navbar-nav a {
-            font-size: 18px;
-        }
-
-        /* Style untuk mencetak */
-        @media print {
-            body {
-                background-color: white;
-            }
-
-            .custom-container {
-                box-shadow: none;
-                width: 100%;
-                padding: 0;
-                border-radius: 0;
-            }
-
-            .custom-footer {
-                display: none;
-            }
-        }
-
-        .custom-footer {
-            background-color: #343a40;
-            color: white;
-            padding: 10px 0;
-            text-align: center;
-            width: 100%;
-            /* position: fixed; */
-            bottom: 0;
-        }
-    </style>
+    <link rel="stylesheet" href="customstyle.css">
 </head>
 
 <body>
@@ -113,180 +40,71 @@
     <br>
     <br>
 
-    <div class="container custom-container">
+    <div class="container custom-container col-md-5">
+        <label for="alasan" class="center-label">Surat Perintah Kerja Lembur</label>
+        <hr class="bold-hr">
+        <br>
         <form id="leaveForm">
             <div class="form-group">
-                <label for="nik">NIK:</label>
-                <input type="text" class="form-control" id="nik" name="nik" placeholder="Masukkan NIK" required>
+                <label for="tanggal">Tanggal:</label>
+                <input type="date" class="form-control" id="tanggal" name="tanggal" required>
             </div>
             <div class="form-group">
                 <label for="nama">Nama:</label>
-                <input type="text" class="form-control" id="nama" name="nama" readonly>
+                <input type="text" class="form-control" id="nama" name="nama" placeholder="Masukkan Nama" required>
             </div>
             <div class="form-group">
-                <label for="jabatan">Jabatan:</label>
-                <input type="text" class="form-control" id="jabatan" name="jabatan" placeholder="Masukkan Jabatan" required>
+                <label for="jabatan">Bagian:</label>
+                <input type="text" class="form-control" id="jabatan" name="jabatan" placeholder="Masukkan Bagian" required>
             </div>
-            <label for="alasan" class="font-weight-bold" style="font-size: 20px;">Tidak Masuk Kerja (tanpa potong cuti)</label>
+            <br>
+            <hr>
+            <label for="alasan" class="font-weight-bold" style="font-size: 20px;">Jam Lembur</label>
             <div class="form-row">
                 <div class="form-group col-md-6">
-                    <label for="hari1">Mulai Cuti:</label>
-                    <input type="date" class="form-control" id="hari1" name="hari1" required
-                        onchange="hitungJumlahCuti()">
+                    <label for="jamMasuk">Jam Masuk:</label>
+                    <input type="time" class="form-control" id="jamMasuk" name="jamMasuk" required>
                 </div>
                 <div class="form-group col-md-6">
-                    <label for="hari2">Selesai Cuti:</label>
-                    <input type="date" class="form-control" id="hari2" name="hari2" required
-                        onchange="hitungJumlahCuti()">
-                </div>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="cutiType" value="Sakit" id="cutiType1" required>
-                <label class="form-check-label" for="cutiType1">
-                    Sakit (Dengan Surat Dokter)
-                </label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="cutiType" value="1 Hari" id="cutiType2" required>
-                <label class="form-check-label" for="cutiType2">
-                    1 Hari (Dengan Surat Dokter)
-                </label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="cutiType" value="1 Hari" id="cutiType3" required>
-                <label class="form-check-label" for="cutiType3">
-                    1 Hari (Dengan Surat Dokter)
-                </label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="cutiType" value="1 Hari" id="cutiType4" required>
-                <label class="form-check-label" for="cutiType4">
-                    1 Hari (Dengan Surat Dokter)
-                </label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="cutiType" value="1 Hari" id="cutiType5" required>
-                <label class="form-check-label" for="cutiType5">
-                    1 Hari (Dengan Surat Dokter)
-                </label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="cutiType" value="1 Hari" id="cutiType6" required>
-                <label class="form-check-label" for="cutiType6">
-                    1 Hari (Dengan Surat Dokter)
-                </label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="cutiType" value="1 Hari" id="cutiType7" required>
-                <label class="form-check-label" for="cutiType7">
-                    1 Hari (Dengan Surat Dokter)
-                </label>
-            </div>
-              <br>
-              <label for="alasan" class="font-weight-bold" style="font-size: 20px;">Cuti</label>
-              <div class="form-row">
-                <div class="form-group col-md-6">
-                    <label for="hari1">Mulai Cuti:</label>
-                    <input type="date" class="form-control" id="hari1" name="hari1" required
-                        onchange="hitungJumlahCuti()">
-                </div>
-                <div class="form-group col-md-6">
-                    <label for="hari2">Selesai Cuti:</label>
-                    <input type="date" class="form-control" id="hari2" name="hari2" required
-                        onchange="hitungJumlahCuti()">
+                    <label for="jamKeluar">Jam Keluar:</label>
+                    <input type="time" class="form-control" id="jamKeluar" name="jamKeluar" required>
                 </div>
             </div>
             <div class="form-group">
-                <label for="jumlahCuti">Jumlah Cuti:</label>
-                <input type="text" class="form-control" id="jumlahCuti" name="jumlahCuti" readonly>
+                <label for="totalOt">Total OT:</label>
+                <input type="text" class="form-control" id="totalOt" name="totalOt" readonly>
             </div>
             <div class="form-group">
-                <label for="alasan">Keperluan:</label>
-                <textarea class="form-control" id="alasan" name="alasan" rows="4" placeholder="Masukkan keperluan cuti"
-                    required></textarea>
+                <label for="Keterangan">Keterangan:</label>
+                <textarea class="form-control" id="Keterangan" name="Keterangan" rows="4" placeholder="Masukkan keterangan" required></textarea>
             </div>
-            <div class="form-group">
-                <label for="sisaCuti">Sisa Cuti:</label>
-                <input type="number" class="form-control" id="sisaCuti" name="sisaCuti" placeholder="Sisa hari cuti"
-                    readonly>
-            </div>
-            <label for="alasan" class="font-weight-bold" style="font-size: 20px;">Ijin Tidak Masuk Kerja (dipotong cuti)</label>
+            <hr>
             <div class="form-row">
                 <div class="form-group col-md-6">
-                    <label for="hari1">Mulai Cuti:</label>
-                    <input type="date" class="form-control" id="hari1" name="hari1" required
-                        onchange="hitungJumlahCuti()">
-                </div>
-                <div class="form-group col-md-6">
-                    <label for="hari2">Selesai Cuti:</label>
-                    <input type="date" class="form-control" id="hari2" name="hari2" required
-                        onchange="hitungJumlahCuti()">
+                    <label for="dateCreate">Lampung</label>
+                    <input type="date" class="form-control" id="dateCreate" name="dateCreate" required>
                 </div>
             </div>
-            <div class="form-group">
-                <label for="alasan">Alasan:</label>
-                <textarea class="form-control" id="alasan" name="alasan" rows="4" placeholder="Masukkan alasan cuti"
-                    required></textarea>
-            </div>
-            <label for="alasan" class="font-weight-bold" style="font-size: 20px;">Terlambat / Meninggalkan Pekerjaan (Pulang Cepat)</label>
-            <div class="form-row">
-                <div class="form-group col-md-6">
-                    <label for="hari1">Mulai Cuti:</label>
-                    <input type="date" class="form-control" id="hari1" name="hari1" required
-                        onchange="hitungJumlahCuti()">
-                </div>
-                <div class="form-group col-md-6">
-                    <label for="hari2">Selesai Cuti:</label>
-                    <input type="date" class="form-control" id="hari2" name="hari2" required
-                        onchange="hitungJumlahCuti()">
-                </div>
-            </div>
-            <div class="form-group">
-                <label for="jam" class="font-weight-bold" style="font-size: 20px;">Jam:</label>
-                <input type="time" class="form-control" id="jam" name="jam" required>
-            </div>
-            <div class="form-group">
-                <label for="alasan">Alasan:</label>
-                <textarea class="form-control" id="alasan" name="alasan" rows="4" placeholder="Masukkan alasan cuti"
-                    required></textarea>
-            </div>
-
-            <div class="form-group">
-                <label for="dateCreate">Lampung</label>
-                <input type="date" class="form-control" id="dateCreate" name="dateCreate" required>
-            </div>
+            <hr>
             <div class="form-group">
                 <label for="approval1">Approval 1:</label>
                 <select class="form-control" id="approval1" name="approval1" required>
                     <option value="1">Approval 1 - Option 1</option>
                     <option value="2">Approval 1 - Option 2</option>
-                    <!-- Add more options as needed -->
                 </select>
             </div>
+            <hr>
             <div class="form-group">
                 <label for="approval2">Approval 2:</label>
                 <select class="form-control" id="approval2" name="approval2" required>
                     <option value="1">Approval 2 - Option 1</option>
                     <option value="2">Approval 2 - Option 2</option>
-                    <!-- Add more options as needed -->
                 </select>
             </div>
-            <div class="form-group">
-                <label for="cabang">Cabang:</label>
-                <select class="form-control" id="cabang" name="cabang" required>
-                    <option value="Cabang 1">Cabang 1</option>
-                    <option value="Cabang 2">Cabang 2</option>
-                    <option value="Cabang 3">Cabang 3</option>
-                    <option value="Cabang 4">Cabang 4</option>
-                    <option value="Cabang 5">Cabang 5</option>
-                    <option value="Cabang 6">Cabang 6</option>
-                    <!-- Add more options as needed -->
-                </select>
-            </div>
+            <br>
             <button type="button" class="btn btn-primary btn-block" onclick="submitAndPrint()">Submit Form</button>
         </form>
     </div>
-
      <!-- Footer Section -->
      <div class="custom-footer">
         <p style="margin-bottom: 0;"></pstyle>&copy; 2023 Primadaya Plastisindo</p>
@@ -297,54 +115,23 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     <script>
-        var scriptUrl = 'https://script.google.com/macros/s/AKfycbzGgPS4GQJcSAYJoySchfZIrvWgyjcMWNT9Q9k2cDgIAdA-wn6aHXNAGbn9fXtbCuY2rw/exec';
-    
-        function hitungJumlahCuti() {
-            var hari1 = new Date(document.getElementById("hari1").value);
-            var hari2 = new Date(document.getElementById("hari2").value);
-    
-            // Menghitung selisih dalam hari
-            var diffDays = Math.ceil((hari2 - hari1) / (1000 * 60 * 60 * 24));
-    
-            // Menyisipkan nilai ke input jumlahCuti
-            document.getElementById("jumlahCuti").value = diffDays || 0;
-    
-            // Menyisipkan nilai ke input sisaCuti (dengan nilai default 12)
-            document.getElementById("sisaCuti").value = Math.max(12 - diffDays, 0);
-        }
-    
-        // function submitForm() {
-        //     var nik = document.getElementById("nik").value;
-    
-        //     // Kirim data ke Google Apps Script
-        //     google.script.run
-        //         .withSuccessHandler(function (response) {
-        //             console.log(response);
-        //             // Handle respons sukses jika diperlukan
-        //         })
-        //         .withFailureHandler(function (error) {
-        //             console.error(error);
-        //             // Handle respons kesalahan jika diperlukan
-        //         })
-        //         .doPost({ nik: nik, /* tambahkan data lainnya */ });
-        // }
+        // Mendengarkan perubahan pada input jam masuk dan jam keluar
+        document.getElementById('jamMasuk').addEventListener('change', updateTotalOt);
+        document.getElementById('jamKeluar').addEventListener('change', updateTotalOt);
 
-// ... (Fungsi hitungJumlahCuti dan submitForm yang sudah ada) ...
-
-function submitAndPrint() {
-            // Lakukan hal yang diperlukan sebelum submit, misalnya validasi form
-
-            // Kirim data ke Google Apps Script (ganti dengan implementasi sesuai kebutuhan)
-            submitForm();
-
-            // Membuka jendela cetak setelah submit
-            window.print();
+        function updateTotalOt() {
+            var jamMasuk = document.getElementById('jamMasuk').value;
+            var jamKeluar = document.getElementById('jamKeluar').value;
+            var totalJamLembur = calculateTotalJamLembur(jamMasuk, jamKeluar);
+            document.getElementById('totalOt').value = totalJamLembur;
         }
 
-        // Fungsi submitForm (ganti dengan implementasi sesuai kebutuhan)
-        function submitForm() {
-            var nik = document.getElementById("nik").value;
-            // ... (Proses pengiriman data ke Google Apps Script atau server lainnya)
+        function calculateTotalJamLembur(jamMasuk, jamKeluar) {
+            var masuk = new Date('2023-01-01 ' + jamMasuk);
+            var keluar = new Date('2023-01-01 ' + jamKeluar);
+            var selisih = keluar - masuk;
+            var totalJam = selisih / (1000 * 60 * 60);
+            return totalJam.toFixed(0) + " Jam";
         }
     </script>
     

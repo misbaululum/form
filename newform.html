@@ -32,8 +32,10 @@
                 padding-top: 20px;
                 margin-top: 50px;
                 margin-bottom: 50px;
-                margin-left: 5px;
-                margin-right: 5px;
+                margin-left: 8px;
+                margin-right: 8px;
+                max-width: 800px;
+                padding: 20px;
             }
         }
 
@@ -60,7 +62,7 @@
 
             .custom-container {
                 box-shadow: none;
-                width: 100%;
+                width: auto;
                 padding: 0;
                 border-radius: 0;
             }
@@ -84,7 +86,7 @@
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-        <a class="navbar-brand" href="#">PDP Form</a>
+        <a class="navbar-brand" href="index.html">PDP Form</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -92,7 +94,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="home.html">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="newform.html">Page 1</a>
@@ -113,7 +115,7 @@
     <br>
     <br>
 
-    <div class="container custom-container">
+    <div class="container custom-container col-md-5">
         <form id="leaveForm">
             <div class="form-group">
                 <label for="nik">NIK:</label>
@@ -225,20 +227,14 @@
             </div>
             <div class="form-group">
                 <label for="alasan">Alasan:</label>
-                <textarea class="form-control" id="alasan" name="alasan" rows="4" placeholder="Masukkan alasan cuti"
+                <textarea class="form-control" id="alasan" name="alasan" rows="4" placeholder="Masukkan alasan"
                     required></textarea>
             </div>
             <label for="alasan" class="font-weight-bold" style="font-size: 20px;">Terlambat / Meninggalkan Pekerjaan (Pulang Cepat)</label>
             <div class="form-row">
                 <div class="form-group col-md-6">
-                    <label for="hari1">Mulai Cuti:</label>
-                    <input type="date" class="form-control" id="hari1" name="hari1" required
-                        onchange="hitungJumlahCuti()">
-                </div>
-                <div class="form-group col-md-6">
-                    <label for="hari2">Selesai Cuti:</label>
-                    <input type="date" class="form-control" id="hari2" name="hari2" required
-                        onchange="hitungJumlahCuti()">
+                    <label for="tanggalcpt">Tanggal:</label>
+                    <input type="date" class="form-control" id="tanggalcpt" name="tanggalcpt" required">
                 </div>
             </div>
             <div class="form-group">
@@ -247,14 +243,15 @@
             </div>
             <div class="form-group">
                 <label for="alasan">Alasan:</label>
-                <textarea class="form-control" id="alasan" name="alasan" rows="4" placeholder="Masukkan alasan cuti"
+                <textarea class="form-control" id="alasan" name="alasan" rows="4" placeholder="Masukkan alasan"
                     required></textarea>
             </div>
-
-            <div class="form-group">
+            <div class="form-row">
+            <div class="form-group col-md-6">
                 <label for="dateCreate">Lampung</label>
                 <input type="date" class="form-control" id="dateCreate" name="dateCreate" required>
             </div>
+        </div>
             <div class="form-group">
                 <label for="approval1">Approval 1:</label>
                 <select class="form-control" id="approval1" name="approval1" required>

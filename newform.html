@@ -41,21 +41,21 @@
     <br>
 
     <div class="container custom-container col-md-5">
-        <label for="alasan" class="center-label">Form Cuti</label>
+        <label for="title-form" class="center-label">Form Cuti</label>
         <hr class="bold-hr">
         <br>
         <form id="leaveForm">
             <div class="form-group">
-                <label for="nik">NIK:</label>
-                <input type="text" class="form-control" id="nik" name="nik" placeholder="Masukkan NIK" required autofocus>
+                <label for="NIK">NIK:</label>
+                <input type="text" class="form-control" id="NIK" name="NIK" placeholder="Masukkan NIK" required autofocus>
             </div>
             <div class="form-group">
-                <label for="nama">Nama:</label>
-                <input type="text" class="form-control" id="nama" name="nama" placeholder="Masukkan Jabatan" required autofocus>
+                <label for="NAMA">Nama:</label>
+                <input type="text" class="form-control" id="NAMA" name="NAMA" placeholder="Masukkan Jabatan" required autofocus>
             </div>
             <div class="form-group">
-                <label for="jabatan">Jabatan:</label>
-                <input type="text" class="form-control" id="jabatan" name="jabatan" placeholder="Masukkan Jabatan" required autofocus>
+                <label for="JABATAN">Jabatan:</label>
+                <input type="text" class="form-control" id="JABATAN" name="JABATAN" placeholder="Masukkan Jabatan" required autofocus>
             </div>
             <br>
               <hr>
@@ -63,55 +63,55 @@
             <label for="alasan" class="font-weight-bold" style="font-size: 20px;">Tidak Masuk Kerja (tanpa potong cuti)</label>
             <div class="form-row">
                 <div class="form-group col-md-6">
-                    <label for="hari1">Mulai Cuti:</label>
-                    <input type="date" class="form-control" id="hari1" name="hari1" required autofocus
+                    <label for="MULAI_CUTI1">Mulai Cuti:</label>
+                    <input type="date" class="form-control" id="MULAI_CUTI1" name="MULAI_CUTI1" required autofocus
                         onchange="hitungJumlahCuti()">
                 </div>
                 <div class="form-group col-md-6">
-                    <label for="hari2">Selesai Cuti:</label>
-                    <input type="date" class="form-control" id="hari2" name="hari2" required autofocus
+                    <label for="SELESAI_CUTI2">Selesai Cuti:</label>
+                    <input type="date" class="form-control" id="SELESAI_CUTI2" name="SELESAI_CUTI2" required autofocus
                         onchange="hitungJumlahCuti()">
                 </div>
             </div>
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="cutiType1" value="Sakit" id="cutiType1" required>
-                <label class="form-check-label" for="cutiType1">
+                <input class="form-check-input" type="radio" name="CUTI_TYPE1" value="Sakit" id="CUTI_TYPE1">
+                <label class="form-check-label" for="CUTI_TYPE1">
                     Sakit (Dengan Surat Dokter)
                 </label>
             </div>
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="cutiType2" value="1Hari" id="cutiType2" required>
-                <label class="form-check-label" for="cutiType2">
+                <input class="form-check-input" type="radio" name="CUTI_TYPE2" value="1Hari" id="CUTI_TYPE2">
+                <label class="form-check-label" for="CUTI_TYPE2">
                     1 Hari - Kematian anggota keluarga dalam satu rumah
                 </label>
             </div>
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="cutiType3" value="2Hari" id="cutiType3" required>
-                <label class="form-check-label" for="cutiType3">
+                <input class="form-check-input" type="radio" name="CUTI_TYPE3" value="2Hari" id="CUTI_TYPE3">
+                <label class="form-check-label" for="CUTI_TYPE3">
                     2 Hari - Kematian Istri/Suami/Orang Tua/Mertua/Anak/Menantu
                 </label>
             </div>
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="cutiType4" value="3Hari" id="cutiType4" required>
-                <label class="form-check-label" for="cutiType4">
+                <input class="form-check-input" type="radio" name="CUTI_TYPE4" value="3Hari" id="CUTI_TYPE4">
+                <label class="form-check-label" for="CUTI_TYPE4">
                     3 Hari - Perkawinan Sendiri
                 </label>
             </div>
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="cutiType5" value="Istri" id="cutiType5" required>
-                <label class="form-check-label" for="cutiType5">
+                <input class="form-check-input" type="radio" name="CUTI_TYPE5" value="Istri" id="CUTI_TYPE5">
+                <label class="form-check-label" for="CUTI_TYPE5">
                     2 Hari - Istri Melahirkan/Keguguran 
                 </label>
             </div>
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="cutiType6" value="Mantu" id="cutiType6" required>
-                <label class="form-check-label" for="cutiType6">
+                <input class="form-check-input" type="radio" name="CUTI_TYPE6" value="Mantu" id="CUTI_TYPE6">
+                <label class="form-check-label" for="CUTI_TYPE6">
                     2 Hari - Perkawinan Anak
                 </label>
             </div>
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="cutiType7" value="Sunat" id="cutiType7" required>
-                <label class="form-check-label" for="cutiType7">
+                <input class="form-check-input" type="radio" name="CUTI_TYPE7" value="Sunat" id="CUTI_TYPE7">
+                <label class="form-check-label" for="CUTI_TYPE7">
                     2 Hari - Khitanan/Baptisan Anak
                 </label>
             </div>
@@ -121,29 +121,28 @@
               <label for="alasan" class="font-weight-bold" style="font-size: 20px;">Cuti</label>
               <div class="form-row">
                 <div class="form-group col-md-6">
-                    <label for="hari1">Mulai Cuti:</label>
-                    <input type="date" class="form-control" id="hari12" name="hari12" required autofocus
+                    <label for="MULAI_CUTI_CUTI">Mulai Cuti:</label>
+                    <input type="date" class="form-control" id="MULAI_CUTI_CUTI" name="MULAI_CUTI_CUTI" required autofocus
                         onchange="hitungJumlahCuti()">
                 </div>
                 <div class="form-group col-md-6">
-                    <label for="hari2">Selesai Cuti:</label>
-                    <input type="date" class="form-control" id="hari23" name="hari23" required autofocus
+                    <label for="SELESAI_CUTI-CUTI">Selesai Cuti:</label>
+                    <input type="date" class="form-control" id="SELESAI_CUTI-CUTI" name="SELESAI_CUTI-CUTI" required autofocus
                         onchange="hitungJumlahCuti()">
                 </div>
             </div>
             <div class="form-group">
-                <label for="jumlahCuti">Jumlah Cuti:</label>
-                <input type="text" class="form-control" id="jumlahCuti" name="jumlahCuti" readonly>
+                <label for="JUMLAH_CUTI">Jumlah Cuti:</label>
+                <input type="text" class="form-control" id="JUMLAH_CUTI" name="JUMLAH_CUTI">
             </div>
             <div class="form-group">
-                <label for="alasan">Keperluan:</label>
-                <textarea class="form-control" id="keperluan" name="keperluan" rows="4" placeholder="Masukkan keperluan cuti"
+                <label for="KEPERLUAN">Keperluan:</label>
+                <textarea class="form-control" id="KEPERLUAN" name="KEPERLUAN" rows="4" placeholder="Masukkan keperluan cuti"
                     required autofocus></textarea>
             </div>
             <div class="form-group">
-                <label for="sisaCuti">Sisa Cuti:</label>
-                <input type="number" class="form-control" id="sisaCuti" name="sisaCuti" placeholder="Sisa hari cuti"
-                    readonly>
+                <label for="SISA_CUTI">Sisa Cuti:</label>
+                <input type="number" class="form-control" id="SISA_CUTI" name="SISA_CUTI" placeholder="Sisa hari cuti">
             </div>
             <br>
               <hr>
@@ -151,19 +150,19 @@
             <label for="alasan" class="font-weight-bold" style="font-size: 20px;">Ijin Tidak Masuk Kerja (dipotong cuti)</label>
             <div class="form-row">
                 <div class="form-group col-md-6">
-                    <label for="hari1">Mulai Cuti:</label>
-                    <input type="date" class="form-control" id="hari14" name="hari14" required autofocus
+                    <label for="MULAI_CUTI_IJIN">Mulai Cuti:</label>
+                    <input type="date" class="form-control" id="MULAI_CUTI_IJIN" name="MULAI_CUTI_IJIN" required autofocus
                         onchange="hitungJumlahCuti()">
                 </div>
                 <div class="form-group col-md-6">
-                    <label for="hari2">Selesai Cuti:</label>
-                    <input type="date" class="form-control" id="hari25" name="hari25" required autofocus
+                    <label for="SELESAI_CUTI_IJIN">Selesai Cuti:</label>
+                    <input type="date" class="form-control" id="SELESAI_CUTI_IJIN" name="SELESAI_CUTI_IJIN" required autofocus
                         onchange="hitungJumlahCuti()">
                 </div>
             </div>
             <div class="form-group">
-                <label for="alasan">Alasan:</label>
-                <textarea class="form-control" id="alasan" name="alasan" rows="4" placeholder="Masukkan alasan"
+                <label for="ALASAN_CUTI_IJIN">Alasan:</label>
+                <textarea class="form-control" id="ALASAN_CUTI_IJIN" name="ALASAN_CUTI_IJIN" rows="4" placeholder="Masukkan alasan"
                     required autofocus></textarea>
             </div>
             <br>
@@ -172,30 +171,30 @@
             <label for="alasan" class="font-weight-bold" style="font-size: 20px;">Terlambat / Meninggalkan Pekerjaan (Pulang Cepat)</label>
             <div class="form-row">
                 <div class="form-group col-md-6">
-                    <label for="tanggalcpt">Tanggal:</label>
-                    <input type="date" class="form-control" id="tanggalCpt" name="tanggalCpt" required autofocus">
+                    <label for="TANGGAL_TELAT_PULANG">Tanggal:</label>
+                    <input type="date" class="form-control" id="TANGGAL_TELAT_PULANG" name="TANGGAL_TELAT_PULANG" required autofocus">
                 </div>
             </div>
             <div class="form-group">
-                <label for="jam" class="font-weight-bold" style="font-size: 20px;">Jam:</label>
-                <input type="time" class="form-control" id="jam" name="jam" required autofocus>
+                <label for="JAM_TELAT_PULANG" class="font-weight-bold" style="font-size: 20px;">Jam:</label>
+                <input type="time" class="form-control" id="JAM_TELAT_PULANG" name="JAM_TELAT_PULANG" required autofocus>
             </div>
             <div class="form-group">
-                <label for="alasan">Alasan:</label>
-                <textarea class="form-control" id="alasan2" name="alasan2" rows="4" placeholder="Masukkan alasan"
+                <label for="ALASAN_TELAT_PULANG">Alasan:</label>
+                <textarea class="form-control" id="ALASAN_TELAT_PULANG" name="ALASAN_TELAT_PULANG" rows="4" placeholder="Masukkan alasan"
                     required autofocus></textarea>
             </div>
             <hr>
             <div class="form-row">
             <div class="form-group col-md-6">
-                <label for="dateCreate">Lampung</label>
-                <input type="date" class="form-control" id="dateCreate" name="dateCreate" required autofocus>
+                <label for="TANGGAL_DIBUAT">Lampung</label>
+                <input type="date" class="form-control" id="TANGGAL_DIBUAT" name="TANGGAL_DIBUAT" required autofocus>
             </div>
         </div>
         <hr>
             <div class="form-group">
-                <label for="approval1">Menyetujui:</label>
-                <select class="form-control" id="approval1" name="approval1" required autofocus>
+                <label for="MENYETUJUI">Menyetujui:</label>
+                <select class="form-control" id="MENYETUJUI" name="MENYETUJUI" required autofocus>
                     <option value="">Pilih Approval</option>
                     <option value="1">Approval 1</option>
                     <option value="2">Approval 2</option>
@@ -206,8 +205,8 @@
             </div>
             <hr>
             <div class="form-group">
-                <label for="approval2">Mengetahui:</label>
-                <select class="form-control" id="approval2" name="approval2" required autofocus>
+                <label for="MENGETAHUI">Mengetahui:</label>
+                <select class="form-control" id="MENGETAHUI" name="MENGETAHUI" required autofocus>
                     <option value="">Pilih Approval</option>
                     <option value="1">Approval 1</option>
                     <option value="2">Approval 2</option>
@@ -218,8 +217,8 @@
             </div>
             <hr>
             <div class="form-group">
-                <label for="cabang">Cabang:</label>
-                <select class="form-control" id="cabang" name="cabang" required autofocus>
+                <label for="CABANG">Cabang:</label>
+                <select class="form-control" id="CABANG" name="CABANG" required autofocus>
                     <option value="">Pilih Cabang</option>
                     <option value="Primadaya_Cileungsi">Primadaya_Cileungsi</option>
                         <option value="Primadaya_Lampung">Primadaya_Lampung</option>

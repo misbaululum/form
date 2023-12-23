@@ -47,7 +47,7 @@
         <form id="leaveForm">
             <div class="form-group">
                 <label for="nik">NIK:</label>
-                <input type="text" class="form-control" id="nik" name="nik" placeholder="Masukkan NIK" required>
+                <input type="text" class="form-control" id="nik" name="nik" placeholder="Masukkan NIK" required autofocus>
             </div>
             <div class="form-group">
                 <label for="nama">Nama:</label>
@@ -55,7 +55,7 @@
             </div>
             <div class="form-group">
                 <label for="jabatan">Jabatan:</label>
-                <input type="text" class="form-control" id="jabatan" name="jabatan" placeholder="Masukkan Jabatan" required>
+                <input type="text" class="form-control" id="jabatan" name="jabatan" placeholder="Masukkan Jabatan" required autofocus>
             </div>
             <br>
               <hr>
@@ -64,12 +64,12 @@
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label for="hari1">Mulai Cuti:</label>
-                    <input type="date" class="form-control" id="hari1" name="hari1" required
+                    <input type="date" class="form-control" id="hari1" name="hari1" required autofocus
                         onchange="hitungJumlahCuti()">
                 </div>
                 <div class="form-group col-md-6">
                     <label for="hari2">Selesai Cuti:</label>
-                    <input type="date" class="form-control" id="hari2" name="hari2" required
+                    <input type="date" class="form-control" id="hari2" name="hari2" required autofocus
                         onchange="hitungJumlahCuti()">
                 </div>
             </div>
@@ -122,12 +122,12 @@
               <div class="form-row">
                 <div class="form-group col-md-6">
                     <label for="hari1">Mulai Cuti:</label>
-                    <input type="date" class="form-control" id="hari1" name="hari1" required
+                    <input type="date" class="form-control" id="hari1" name="hari1" required autofocus
                         onchange="hitungJumlahCuti()">
                 </div>
                 <div class="form-group col-md-6">
                     <label for="hari2">Selesai Cuti:</label>
-                    <input type="date" class="form-control" id="hari2" name="hari2" required
+                    <input type="date" class="form-control" id="hari2" name="hari2" required autofocus
                         onchange="hitungJumlahCuti()">
                 </div>
             </div>
@@ -138,7 +138,7 @@
             <div class="form-group">
                 <label for="alasan">Keperluan:</label>
                 <textarea class="form-control" id="alasan" name="alasan" rows="4" placeholder="Masukkan keperluan cuti"
-                    required></textarea>
+                    required autofocus></textarea>
             </div>
             <div class="form-group">
                 <label for="sisaCuti">Sisa Cuti:</label>
@@ -152,19 +152,19 @@
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label for="hari1">Mulai Cuti:</label>
-                    <input type="date" class="form-control" id="hari1" name="hari1" required
+                    <input type="date" class="form-control" id="hari1" name="hari1" required autofocus
                         onchange="hitungJumlahCuti()">
                 </div>
                 <div class="form-group col-md-6">
                     <label for="hari2">Selesai Cuti:</label>
-                    <input type="date" class="form-control" id="hari2" name="hari2" required
+                    <input type="date" class="form-control" id="hari2" name="hari2" required autofocus
                         onchange="hitungJumlahCuti()">
                 </div>
             </div>
             <div class="form-group">
                 <label for="alasan">Alasan:</label>
                 <textarea class="form-control" id="alasan" name="alasan" rows="4" placeholder="Masukkan alasan"
-                    required></textarea>
+                    required autofocus></textarea>
             </div>
             <br>
               <hr>
@@ -173,29 +173,29 @@
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label for="tanggalcpt">Tanggal:</label>
-                    <input type="date" class="form-control" id="tanggalcpt" name="tanggalcpt" required">
+                    <input type="date" class="form-control" id="tanggalcpt" name="tanggalcpt" required autofocus">
                 </div>
             </div>
             <div class="form-group">
                 <label for="jam" class="font-weight-bold" style="font-size: 20px;">Jam:</label>
-                <input type="time" class="form-control" id="jam" name="jam" required>
+                <input type="time" class="form-control" id="jam" name="jam" required autofocus>
             </div>
             <div class="form-group">
                 <label for="alasan">Alasan:</label>
                 <textarea class="form-control" id="alasan" name="alasan" rows="4" placeholder="Masukkan alasan"
-                    required></textarea>
+                    required autofocus></textarea>
             </div>
             <hr>
             <div class="form-row">
             <div class="form-group col-md-6">
                 <label for="dateCreate">Lampung</label>
-                <input type="date" class="form-control" id="dateCreate" name="dateCreate" required>
+                <input type="date" class="form-control" id="dateCreate" name="dateCreate" required autofocus>
             </div>
         </div>
         <hr>
             <div class="form-group">
                 <label for="approval1">Menyetujui:</label>
-                <select class="form-control" id="approval1" name="approval1" required>
+                <select class="form-control" id="approval1" name="approval1" required autofocus>
                     <option value="">Pilih Approval</option>
                     <option value="1">Approval 1</option>
                     <option value="2">Approval 2</option>
@@ -207,7 +207,7 @@
             <hr>
             <div class="form-group">
                 <label for="approval2">Mengetahui:</label>
-                <select class="form-control" id="approval2" name="approval2" required>
+                <select class="form-control" id="approval2" name="approval2" required autofocus>
                     <option value="">Pilih Approval</option>
                     <option value="1">Approval 1</option>
                     <option value="2">Approval 2</option>
@@ -219,7 +219,7 @@
             <hr>
             <div class="form-group">
                 <label for="cabang">Cabang:</label>
-                <select class="form-control" id="cabang" name="cabang" required>
+                <select class="form-control" id="cabang" name="cabang" required autofocus>
                     <option value="">Pilih Cabang</option>
                     <option value="Primadaya_Cileungsi">Primadaya_Cileungsi</option>
                         <option value="Primadaya_Lampung">Primadaya_Lampung</option>

@@ -51,7 +51,7 @@
             </div>
             <div class="form-group">
                 <label for="nama">Nama:</label>
-                <input type="text" class="form-control" id="nama" name="nama" readonly>
+                <input type="text" class="form-control" id="nama" name="nama" placeholder="Masukkan Jabatan" required autofocus>
             </div>
             <div class="form-group">
                 <label for="jabatan">Jabatan:</label>
@@ -74,43 +74,43 @@
                 </div>
             </div>
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="cutiType" value="Sakit" id="cutiType1" required>
+                <input class="form-check-input" type="radio" name="cutiType1" value="Sakit" id="cutiType1" required>
                 <label class="form-check-label" for="cutiType1">
                     Sakit (Dengan Surat Dokter)
                 </label>
             </div>
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="cutiType" value="1Hari" id="cutiType2" required>
+                <input class="form-check-input" type="radio" name="cutiType2" value="1Hari" id="cutiType2" required>
                 <label class="form-check-label" for="cutiType2">
                     1 Hari - Kematian anggota keluarga dalam satu rumah
                 </label>
             </div>
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="cutiType" value="2Hari" id="cutiType3" required>
+                <input class="form-check-input" type="radio" name="cutiType3" value="2Hari" id="cutiType3" required>
                 <label class="form-check-label" for="cutiType3">
                     2 Hari - Kematian Istri/Suami/Orang Tua/Mertua/Anak/Menantu
                 </label>
             </div>
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="cutiType" value="3Hari" id="cutiType4" required>
+                <input class="form-check-input" type="radio" name="cutiType4" value="3Hari" id="cutiType4" required>
                 <label class="form-check-label" for="cutiType4">
                     3 Hari - Perkawinan Sendiri
                 </label>
             </div>
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="cutiType" value="Istri" id="cutiType5" required>
+                <input class="form-check-input" type="radio" name="cutiType5" value="Istri" id="cutiType5" required>
                 <label class="form-check-label" for="cutiType5">
                     2 Hari - Istri Melahirkan/Keguguran 
                 </label>
             </div>
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="cutiType" value="Mantu" id="cutiType6" required>
+                <input class="form-check-input" type="radio" name="cutiType6" value="Mantu" id="cutiType6" required>
                 <label class="form-check-label" for="cutiType6">
                     2 Hari - Perkawinan Anak
                 </label>
             </div>
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="cutiType" value="Sunat" id="cutiType7" required>
+                <input class="form-check-input" type="radio" name="cutiType7" value="Sunat" id="cutiType7" required>
                 <label class="form-check-label" for="cutiType7">
                     2 Hari - Khitanan/Baptisan Anak
                 </label>
@@ -122,12 +122,12 @@
               <div class="form-row">
                 <div class="form-group col-md-6">
                     <label for="hari1">Mulai Cuti:</label>
-                    <input type="date" class="form-control" id="hari1" name="hari1" required autofocus
+                    <input type="date" class="form-control" id="hari12" name="hari12" required autofocus
                         onchange="hitungJumlahCuti()">
                 </div>
                 <div class="form-group col-md-6">
                     <label for="hari2">Selesai Cuti:</label>
-                    <input type="date" class="form-control" id="hari2" name="hari2" required autofocus
+                    <input type="date" class="form-control" id="hari23" name="hari23" required autofocus
                         onchange="hitungJumlahCuti()">
                 </div>
             </div>
@@ -137,7 +137,7 @@
             </div>
             <div class="form-group">
                 <label for="alasan">Keperluan:</label>
-                <textarea class="form-control" id="alasan" name="alasan" rows="4" placeholder="Masukkan keperluan cuti"
+                <textarea class="form-control" id="keperluan" name="keperluan" rows="4" placeholder="Masukkan keperluan cuti"
                     required autofocus></textarea>
             </div>
             <div class="form-group">
@@ -152,12 +152,12 @@
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label for="hari1">Mulai Cuti:</label>
-                    <input type="date" class="form-control" id="hari1" name="hari1" required autofocus
+                    <input type="date" class="form-control" id="hari14" name="hari14" required autofocus
                         onchange="hitungJumlahCuti()">
                 </div>
                 <div class="form-group col-md-6">
                     <label for="hari2">Selesai Cuti:</label>
-                    <input type="date" class="form-control" id="hari2" name="hari2" required autofocus
+                    <input type="date" class="form-control" id="hari25" name="hari25" required autofocus
                         onchange="hitungJumlahCuti()">
                 </div>
             </div>
@@ -173,7 +173,7 @@
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label for="tanggalcpt">Tanggal:</label>
-                    <input type="date" class="form-control" id="tanggalcpt" name="tanggalcpt" required autofocus">
+                    <input type="date" class="form-control" id="tanggalCpt" name="tanggalCpt" required autofocus">
                 </div>
             </div>
             <div class="form-group">
@@ -182,7 +182,7 @@
             </div>
             <div class="form-group">
                 <label for="alasan">Alasan:</label>
-                <textarea class="form-control" id="alasan" name="alasan" rows="4" placeholder="Masukkan alasan"
+                <textarea class="form-control" id="alasan2" name="alasan2" rows="4" placeholder="Masukkan alasan"
                     required autofocus></textarea>
             </div>
             <hr>
@@ -230,7 +230,7 @@
                 </select>
             </div>
             <br>
-            <button type="button" class="btn btn-primary btn-block">Submit Form</button>
+            <button type="submit" class="btn btn-primary btn-block">Submit Form</button>
         </form>
     </div>
 
@@ -244,7 +244,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     <script>
-        var scriptUrl = 'https://script.google.com/macros/s/AKfycbzGgPS4GQJcSAYJoySchfZIrvWgyjcMWNT9Q9k2cDgIAdA-wn6aHXNAGbn9fXtbCuY2rw/exec';
+        // var scriptUrl = 'https://script.google.com/macros/s/AKfycbzGgPS4GQJcSAYJoySchfZIrvWgyjcMWNT9Q9k2cDgIAdA-wn6aHXNAGbn9fXtbCuY2rw/exec';
     
         function hitungJumlahCuti() {
             var hari1 = new Date(document.getElementById("hari1").value);
@@ -293,7 +293,22 @@
     //         var nik = document.getElementById("nik").value;
     //         // ... (Proses pengiriman data ke Google Apps Script atau server lainnya)
     //     }
-    // </script>
+    // 
+
+
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzMAO_XozIJUEEnEFDWfzA7vOdW8wmNXKU6ar9SkdZ9aVTPJ3kNRRnYc8BuZ80dE0oYDA/exec'
+        const form = document.forms['google-sheet']
+        
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => $("#form_alerts").html("<div class='alert alert-success'>Data berhasil dikirim.</div>"))
+            .catch(error => $("#form_alerts").html("<div class='alert alert-danger'>Data gagal terkirim!.</div>"))
+            form.reset();
+        })
+
+
+    </script>
     
 </body>
 
